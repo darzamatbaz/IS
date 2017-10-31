@@ -47,3 +47,10 @@ LabelCharacters.setText("Символов");
 
 final Label Result=new Label(shell,SWT.NULL);
 Result.setLayoutData(gridData2);
+
+Button CalculateCharacters = new Button(shell, SWT.PUSH); //создаем кнопку подсчета 
+CalculateCharacters.setText("Подсчитать количество"); //вводим текст в объект 
+
+Button ClearCharacters = new Button(shell, SWT.PUSH); // создаем кнопку очистки 
+ClearCharacters.setText("Очистить текст"); //вводим текст в объект 
+
