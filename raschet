@@ -23,30 +23,30 @@ gridData2.horizontalAlignment = GridData.FILL; // устанавливаем т�
 gridData2.horizontalSpan = 2; //количество столбцов =2 
 //gridData2.heightHint = 50;
 
-GridData gridData3 = new GridData();
-gridData3.horizontalAlignment = GridData.FILL;
-gridData3.horizontalSpan = 3;
+GridData gridData3 = new GridData();//создаем дополнительный слой 
+gridData3.horizontalAlignment = GridData.FILL;// устаналиваем тип заливки по горизонтали 
+gridData3.horizontalSpan = 3;//количество столбцов =3 
 //gridData3.heightHint = 50; 
 
-GridData gridDataText = new GridData(); 
-gridDataText.horizontalSpan = 3;
-gridDataText.verticalAlignment = GridData.FILL;
-gridDataText.grabExcessVerticalSpace = true;
-gridDataText.horizontalAlignment=GridData.FILL; 
-gridDataText.grabExcessHorizontalSpace=true; 
+GridData gridDataText = new GridData(); /создаем дополнительный слой
+gridDataText.horizontalSpan = 3;//количество столбцов =3 
+gridDataText.verticalAlignment = GridData.FILL;// устаналиваем тип заливки по вертикали 
+gridDataText.grabExcessVerticalSpace = true; //указываем зависимость размера элемента от родительского элемента
+gridDataText.horizontalAlignment=GridData.FILL; // устаналиваем тип заливки по горизонтали 
+gridDataText.grabExcessHorizontalSpace=true; //указываем зависимость размера элемента от родительского элемента 
 
-Label LabelHeader=new Label(shell,SWT.NULL); 
-LabelHeader.setText("Введите текст"); 
-LabelHeader.setLayoutData(gridData3);
+Label LabelHeader=new Label(shell,SWT.NULL);  //создаем объект label 
+LabelHeader.setText("Введите текст"); //вводим текст в объект 
+LabelHeader.setLayoutData(gridData3);// вставляет в нужный слой 
 
-final Text InputText=new Text(shell,SWT.MULTI | SWT.V_SCROLL ); 
-InputText.setLayoutData(gridDataText);
+final Text InputText=new Text(shell,SWT.MULTI | SWT.V_SCROLL );  //создаем поля для ввода текста 
+InputText.setLayoutData(gridDataText);// вставляет в нужный слой 
 
-Label LabelCharacters=new Label(shell,SWT.NULL);
-LabelCharacters.setText("Символов"); 
+Label LabelCharacters=new Label(shell,SWT.NULL);//создаем объект label 
+LabelCharacters.setText("Символов");  //вводим текст в объект 
 
-final Label Result=new Label(shell,SWT.NULL);
-Result.setLayoutData(gridData2);
+final Label Result=new Label(shell,SWT.NULL); //создаем объект label 
+Result.setLayoutData(gridData2); // вставляет в нужный слой
 
 Button CalculateCharacters = new Button(shell, SWT.PUSH); //создаем кнопку подсчета 
 CalculateCharacters.setText("Подсчитать количество"); //вводим текст в объект 
