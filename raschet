@@ -71,24 +71,25 @@ Result.setText(Integer.toString(NumberCharacters)); //выводим резул�
 } 
 });
 
-ClearCharacters.addSelectionListener(new org.eclipse.swt.events.SelectionAdapter() //добавление прослушки события{ 
-public void widgetSelected(org.eclipse.swt.events.SelectionEvent e) 
-
-
-//в случае нажатии кнопки 
-{InputText.setText
-
-(""); // очистка поля текста 
-Result.setText(""); //очистка результата }}); 
+ClearCharacters.addSelectionListener(new org.eclipse.swt.events.SelectionAdapter() //добавление прослушки события
+{ 
+public void widgetSelected(org.eclipse.swt.events.SelectionEvent e) //в случае нажатии кнопки 
+{
+InputText.setText(""); // очистка поля текста 
+Result.setText(""); //очистка результата }
+}); 
 
 shell.setMinimumSize(300, 300); //устанавливаем минимальный размер окна 
 shell.pack(); //вычисление приемлимого размера 
-shell.open
-(); //выводит приложение и делает его активным 
+shell.open(); //выводит приложение и делает его активным 
 //Обработка закрытия окна 
 while (!shell.isDisposed()) { 
 if (!display.readAndDispatch()) { 
-display.sleep(); }} 
+display.sleep(); 
+}
+} 
 //Ресурсы операционной системы 
 //должны быть освобождены 
-display.dispose(); }}
+display.dispose(); 
+}
+}
