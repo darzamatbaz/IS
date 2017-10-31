@@ -22,3 +22,28 @@ GridData gridData2 = new GridData(); //создаем дополнительны
 gridData2.horizontalAlignment = GridData.FILL; // устанавливаем тип заливки по горизонтали 
 gridData2.horizontalSpan = 2; //количество столбцов =2 
 //gridData2.heightHint = 50;
+
+GridData gridData3 = new GridData();
+gridData3.horizontalAlignment = GridData.FILL;
+gridData3.horizontalSpan = 3;
+//gridData3.heightHint = 50; 
+
+GridData gridDataText = new GridData(); 
+gridDataText.horizontalSpan = 3;
+gridDataText.verticalAlignment = GridData.FILL;
+gridDataText.grabExcessVerticalSpace = true;
+gridDataText.horizontalAlignment=GridData.FILL; 
+gridDataText.grabExcessHorizontalSpace=true; 
+
+Label LabelHeader=new Label(shell,SWT.NULL); 
+LabelHeader.setText("Введите текст"); 
+LabelHeader.setLayoutData(gridData3);
+
+final Text InputText=new Text(shell,SWT.MULTI | SWT.V_SCROLL ); 
+InputText.setLayoutData(gridDataText);
+
+Label LabelCharacters=new Label(shell,SWT.NULL);
+LabelCharacters.setText("Символов"); 
+
+final Label Result=new Label(shell,SWT.NULL);
+Result.setLayoutData(gridData2);
